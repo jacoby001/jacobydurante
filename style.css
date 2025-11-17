@@ -1,0 +1,365 @@
+/* REMOVE SCROLLING */
+html, body {
+    height: 100%;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+/* RESET */
+* {
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* BACKGROUND */
+body {
+    background: radial-gradient(circle at top left, #0b0b0b, #000000 60%);
+    color: white;
+}
+
+/* ---------- NAVIGATION ---------- */
+nav {
+    width: 100%;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.nav-links {
+    margin-left: auto;
+}
+
+nav .logo {
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 35px;
+    margin-left: 20px; /* shift links slightly left */
+}
+
+nav ul li a {
+    color: #cfcfcf;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: white;
+    text-shadow: 0 0 10px white;
+}
+
+.github-icon i {
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.github-icon i:hover {
+    transform: scale(1.2);
+}
+
+/* ---------- MAIN SECTION LAYOUT ---------- */
+main {
+    width: 100%;
+    height: 100%;
+}
+
+/* Page switching */
+.page {
+    display: none;
+    width: 100%;
+    height: 100vh;
+    padding-top: 120px;
+}
+
+.page.active {
+    display: flex;
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+/* ---------- ABOUT PAGE ---------- */
+#about {
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10%;
+}
+
+#about .text-content {
+    width: 50%;
+}
+
+#about h1 {
+    font-size: 60px;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+
+#about p {
+    font-size: 18px;
+    color: #d6d6d6;
+    margin-bottom: 35px;
+    line-height: 1.6;
+}
+
+.btn {
+    padding: 14px 40px;
+    background: black;
+    border: 1px solid white;
+    color: white;
+    cursor: pointer;
+    border-radius: 35px;
+    font-size: 16px;
+    transition: 0.3s;
+    margin-right: 10px;
+}
+
+.btn:hover {
+    background: white;
+    color: black;
+}
+
+#about .image-content img {
+    width: 250px;        /* square size */
+    height: 250px;       /* square */
+    object-fit: cover;
+    border-radius: 15px;
+    transition: 0.4s;
+    display: block;
+    margin: 50px auto 0 auto; /* 50px top margin */
+}
+
+
+
+.image-content img:hover {
+    transform: scale(1.02);
+}
+
+/* ---------- EDUCATION PAGE ---------- */
+#education {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+}
+
+#education .header h2 {
+    font-size: 55px;
+    font-weight: 900;
+    margin-bottom: 40px;
+}
+
+.education-boxes {
+    display: flex;
+    gap: 35px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.box {
+    width: 280px;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: left;
+    border: 1px solid rgba(255,255,255,0.1);
+    transition: 0.3s;
+}
+
+.black-box {
+    background: rgba(255,255,255,0.03);
+}
+
+.white-box {
+    background: rgba(255,255,255,0.06);
+}
+
+.box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px rgba(255,255,255,0.15);
+}
+
+/* Education logos */
+.school-logo {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 15px auto;
+    border-radius: 10px;
+}
+
+/* ---------- ACHIEVEMENTS PAGE ---------- */
+#achievements {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+}
+
+#achievements .header h2 {
+    font-size: 55px;
+    font-weight: 900;
+    margin-bottom: 40px;
+}
+
+.achievements-boxes {
+    display: flex;
+    gap: 35px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Achievement images styled like Education logos */
+.achievement-photo {
+    width: 100px;        /* same as school logos */
+    height: 100px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    transition: 0.3s;
+}
+
+.achievement-photo:hover {
+    transform: scale(1.05);
+}
+
+/* Achievement box text like Education */
+.achievements-boxes .box h3 {
+    font-size: 18px;
+}
+
+.achievements-boxes .box p {
+    font-size: 16px;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+    position: fixed;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    color: #cdcdcd;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+/* ---------- ANIMATION ---------- */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* ---------- RESPONSIVE STYLES ---------- */
+@media screen and (max-width: 1024px) {
+    #about {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0 5%;
+    }
+
+    #about .text-content {
+        width: 100%;
+        text-align: center;
+    }
+
+    .image-content img {
+        width: 250px;
+        height: auto;
+    }
+
+    nav ul {
+        gap: 25px;
+    }
+
+    #about h1 {
+        font-size: 45px;
+    }
+
+    #education .header h2,
+    #achievements .header h2 {
+        font-size: 45px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    nav {
+        padding: 15px 20px;
+    }
+
+    nav ul {
+        gap: 15px;
+        margin-left: 10px;
+    }
+
+    #about h1 {
+        font-size: 35px;
+    }
+
+    #about p {
+        font-size: 16px;
+    }
+
+    .image-content img {
+        width: 200px;
+        height: auto;
+    }
+
+    .education-boxes,
+    .achievements-boxes {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #about h1 {
+        font-size: 28px;
+    }
+
+    #about p {
+        font-size: 14px;
+    }
+
+    .btn {
+        padding: 12px 30px;
+        font-size: 14px;
+    }
+
+    .image-content img {
+        width: 180px;
+        height: auto;
+    }
+
+    nav ul {
+        gap: 10px;
+    }
+
+    .education-boxes,
+    .achievements-boxes {
+        gap: 15px;
+    }
+}
