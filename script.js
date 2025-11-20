@@ -4,13 +4,14 @@ function showPage(pageId) {
         page.classList.remove("active");
     });
 
-    // Show chosen page
+    // Show selected page
     document.getElementById(pageId).classList.add("active");
 
-    // Highlight active nav link
-    document.querySelectorAll(".nav-links a").forEach(nav => {
-        nav.classList.remove("active");
+    // Highlight active navbar link
+    document.querySelectorAll(".nav-links a").forEach(link => {
+        link.classList.remove("active");
     });
 
     document.getElementById("nav-" + pageId).classList.add("active");
 }
+

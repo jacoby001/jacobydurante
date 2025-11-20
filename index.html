@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
-
 <body>
 
     <!-- NAVIGATION -->
@@ -18,10 +17,12 @@
         <ul class="nav-links">
             <li><a id="nav-about" onclick="showPage('about')" class="active">About</a></li>
             <li><a id="nav-education" onclick="showPage('education')">Education</a></li>
-            <li><a id="nav-achievements" onclick="showPage('achievements')">Achievements</a></li> <!-- NEW -->
+            <li><a id="nav-achievements" onclick="showPage('achievements')">Achievements</a></li>
         </ul>
 
-        <a href="#" class="github-icon"><i class="fab fa-github"></i></a>
+        <a href="https://github.com/" target="_blank" class="github-icon">
+            <i class="fab fa-github"></i>
+        </a>
     </nav>
 
     <main>
@@ -37,7 +38,7 @@
                 </p>
 
                 <button class="btn" onclick="showPage('education')">Education</button>
-                <button class="btn" onclick="showPage('achievements')">Achievements</button> <!-- NEW -->
+                <button class="btn" onclick="showPage('achievements')">Achievements</button>
             </div>
 
             <div class="image-content">
@@ -45,71 +46,100 @@
             </div>
         </section>
 
-<!-- EDUCATION PAGE -->
-<section id="education" class="page">
-    <div class="header">
-        <h2>EDUCATION</h2>
-    </div>
+        <!-- EDUCATION PAGE -->
+        <section id="education" class="page">
+            <div class="header">
+                <h2>EDUCATION</h2>
+            </div>
 
-    <div class="education-boxes">
+            <div class="education-boxes">
 
-        <!-- Elementary – Highschool -->
-        <div class="box black-box">
-            <img src="rnhs.jpg" alt="Roxas National School Logo" class="school-logo">
-            <h3>Elementary – Highschool</h3>
-            <p>Roxas National School<br>2013–2023</p>
-        </div>
+                <!-- Elementary – Highschool -->
+                <div class="box black-box">
+                    <img src="rnhs.jpg" alt="Roxas National School Logo" class="school-logo">
+                    <h3>Elementary – Highschool</h3>
+                    <p>
+                        Roxas National School <br>
+                        With Honors <br>
+                        3× Top 1 in Essay Writing <br>
+                        2013–2023
+                    </p>
+                </div>
 
-        <!-- Senior Highschool -->
-        <div class="box white-box">
-            <img src="UC.png" alt="University of the Cordilleras Logo" class="school-logo">
-            <h3>Senior Highschool</h3>
-            <p>University of the Cordilleras<br>2023–2025</p>
-        </div>
+                <!-- Senior Highschool -->
+                <div class="box white-box">
+                    <img src="UC.png" alt="University of the Cordilleras Logo" class="school-logo">
+                    <h3>Senior Highschool</h3>
+                    <p>
+                        University of the Cordilleras <br>
+                        With Honors <br>
+                        2023–2025
+                    </p>
+                </div>
 
-        <!-- College -->
-        <div class="box white-box">
-            <img src="UC.png" alt="University of the Cordilleras Logo" class="school-logo">
-            <h3>College</h3>
-            <p>Bachelor of Science in Information Technology (In progress)<br>– University of the Cordilleras.</p>
-        </div>
+                <!-- College -->
+                <div class="box white-box">
+                    <img src="UC.png" alt="University of the Cordilleras Logo" class="school-logo">
+                    <h3>College</h3>
+                    <p>
+                        Bachelor of Science in Information Technology (In progress) <br>
+                        University of the Cordilleras
+                    </p>
+                </div>
 
-    </div>
-</section>
+            </div>
+        </section>
 
-
-
-<!-- ACHIEVEMENTS PAGE -->
+ <!-- ACHIEVEMENTS PAGE -->
 <section id="achievements" class="page">
     <div class="header">
         <h2>ACHIEVEMENTS</h2>
     </div>
 
     <div class="achievements-boxes">
+
         <!-- Highschool Achievement -->
         <div class="box white-box">
-            <img src="writing.png" alt="Highschool Achievement" class="achievement-photo">
-            <h3>Highschool</h3>
-            <p>Honor Student & Best in Essay Writing</p>
+            <img src="writing.png" alt="Junior High Achievement" class="achievement-photo">
+            <h3>High School</h3>
+            <p>
+                Graduated <strong>With Honors</strong> <br>
+                <strong>Top 1 in Essay Writing</strong> (3×)
+            </p>
         </div>
 
         <!-- Senior Highschool Achievement 1 -->
         <div class="box white-box">
             <img src="Uno.png" alt="Senior High Achievement" class="achievement-photo">
-            <h3>Senior Highschool</h3>
-            <p>Arduino Prototyping: Defense Top 5</p>
+            <h3>Senior High School</h3>
+            <p>
+                Graduated <strong>With Honors</strong> <br>
+                <strong>Arduino Prototyping – Defense Phase:</strong> Ranked Top 5
+            </p>
         </div>
 
         <!-- Senior Highschool Achievement 2 -->
         <div class="box white-box">
             <img src="Dos.png" alt="Senior High Achievement" class="achievement-photo">
-            <h3>Senior Highschool</h3>
-            <p>Arduino Prototyping: Finals Top 3 (C++ code for robots)</p>
+            <h3>Senior High School</h3>
+            <p>
+                <strong>Arduino Prototyping – Finals:</strong> Ranked Top 3 <br>
+                <em>(C++ programming for robots)</em> <br>
+                Graduated <strong>With Honors</strong>
+            </p>
         </div>
+
+        <!-- Red Cross Training (No photo) -->
+        <div class="box white-box">
+            <h3>Certifications</h3>
+            <p>
+                Completed <strong>Red Cross Training</strong> (2×) <br>
+                Earned <strong>Certificate & First Aid License</strong>
+            </p>
+        </div>
+
     </div>
 </section>
-
-
 
 
     </main>
@@ -121,6 +151,6 @@
         </div>
     </footer>
 
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
