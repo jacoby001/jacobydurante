@@ -14,4 +14,3 @@ function showPage(pageId) {
 
     document.getElementById("nav-" + pageId).classList.add("active");
 }
-
